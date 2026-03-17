@@ -109,6 +109,18 @@ gcloud run deploy adk-agent \
 --allow-unauthenticated
 ```
 
+## GitHub Actions Deployment
+
+The repository includes a GitHub Actions workflow at `.github/workflows/deploy-cloud-run.yml`.
+
+Add these repository secrets before using the workflow:
+
+- `GCP_PROJECT_ID`
+- `GCP_SA_KEY`
+- `GOOGLE_API_KEY`
+
+The workflow triggers on pushes to `main` and can also be run manually from the Actions tab.
+
 ## Test Deployed API
 
 Replace `SERVICE_URL` with your deployed Cloud Run URL.
